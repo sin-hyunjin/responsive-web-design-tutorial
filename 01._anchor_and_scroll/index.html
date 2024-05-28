@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="Ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>a anchor and scroll</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/jquery.scrollTo.min.js"></script>
+</head>
+
+<!-- 써야할 내용  -->
+
+<body>
+  <div id="top" class="container">
+    <header>
+      <!-- #{id} 값으로 입력해야 함 -->
+      <a href="#part1">html part</a>
+      <a href="#part2">css part</a>
+      <a href="#part3">jquery part</a>
+      <a href="#part4">portfolio part</a>
+    </header>
+
+    <!-- 페이지 섹션: 각각의 섹션은 고유의 ID를 가지고 있어 네비게이션 링크와 연결 -->
+    <h1 id="part1">html part</h1>
+    <hr>
+    <!-- lorem -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quaerat saepe, voluptas veritatis iusto
+      deserunt corporis tempora illum praesentium ipsum, ex aperiam non vel consequatur libero. Impedit fuga ex, facilis
+      repellendus in beatae quia laboriosam, quos reprehenderit aliquid natus. Rem similique, et, voluptatem qui
+      blanditiis iste quis ad perferendis quaerat nam distinctio minima iusto at labore accusantium obcaecati voluptas
+      eligendi esse nemo repudiandae necessitatibus quam velit recusandae! Recusandae quos harum voluptatum laborum
+      veniam! Beatae repudiandae, incidunt autem quae architecto odio veritatis dolore illum ducimus accusantium libero
+      laborum consectetur perferendis soluta quasi quis commodi necessitatibus facilis suscipit? Assumenda suscipit nam
+      explicabo!</p>
+    <a href="#" class="btn-gototop">Go to top</a>
+    <h1 id="part2">css part</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quaerat saepe, voluptas veritatis iusto
+      deserunt corporis tempora illum praesentium ipsum, ex aperiam non vel consequatur libero. Impedit fuga ex, facilis
+      repellendus in beatae quia laboriosam, quos reprehenderit aliquid natus. Rem similique, et, voluptatem qui
+      blanditiis iste quis ad perferendis quaerat nam distinctio minima iusto at labore accusantium obcaecati voluptas
+      eligendi esse nemo repudiandae necessitatibus quam velit recusandae! Recusandae quos harum voluptatum laborum
+      veniam! Beatae repudiandae, incidunt autem quae architecto odio veritatis dolore illum ducimus accusantium libero
+      laborum consectetur perferendis soluta quasi quis commodi necessitatibus facilis suscipit? Assumenda suscipit nam
+      explicabo!</p>
+    <a href="#" class="btn-gototop">Go to top</a>
+    <h1 id="part3">jquery part</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quaerat saepe, voluptas veritatis iusto
+      deserunt corporis tempora illum praesentium ipsum, ex aperiam non vel consequatur libero. Impedit fuga ex, facilis
+      repellendus in beatae quia laboriosam, quos reprehenderit aliquid natus. Rem similique, et, voluptatem qui
+      blanditiis iste quis ad perferendis quaerat nam distinctio minima iusto at labore accusantium obcaecati voluptas
+      eligendi esse nemo repudiandae necessitatibus quam velit recusandae! Recusandae quos harum voluptatum laborum
+      veniam! Beatae repudiandae, incidunt autem quae architecto odio veritatis dolore illum ducimus accusantium libero
+      laborum consectetur perferendis soluta quasi quis commodi necessitatibus facilis suscipit? Assumenda suscipit nam
+      explicabo!</p>
+    <a href="#" class="btn-gototop">Go to top</a>
+    <h1 id="part4">portfolio part</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quaerat saepe, voluptas veritatis iusto
+      deserunt corporis tempora illum praesentium ipsum, ex aperiam non vel consequatur libero. Impedit fuga ex, facilis
+      repellendus in beatae quia laboriosam, quos reprehenderit aliquid natus. Rem similique, et, voluptatem qui
+      blanditiis iste quis ad perferendis quaerat nam distinctio minima iusto at labore accusantium obcaecati voluptas
+      eligendi esse nemo repudiandae necessitatibus quam velit recusandae! Recusandae quos harum voluptatum laborum
+      veniam! Beatae repudiandae, incidunt autem quae architecto odio veritatis dolore illum ducimus accusantium libero
+      laborum consectetur perferendis soluta quasi quis commodi necessitatibus facilis suscipit? Assumenda suscipit nam
+      explicabo!</p>
+    <a href="#top" class="btn-gototop">Go to top</a>
+  </div>
+
+  
+  <!--  Smooth Scroll Start-->
+  <script>
+    $('header a, .btn-gototop').click(function (e) {
+      $.scrollTo(this.hash || 0, 500); 
+      e.prevenDefault();
+    });
+  </script>
+  <!--  Smooth Scroll End-->
+
+
+</body>
+
+</html>
