@@ -1,10 +1,17 @@
+import { Routes, Route } from "react-router";
+import Container from "@components/common/Container";
+import Main from "@components/pages/Main";
+import { MAIN_PATH } from "@constants";
+import "@assets/scss/_main.scss";
 // App.jsx
-
-
 function App() {
   return (
     <>
-      <h1>안녕하세요12312312</h1>
+      <Routes>
+        <Route element={<Container />}>
+          <Route path={MAIN_PATH()} element={<Main />}></Route>
+        </Route>
+      </Routes>
     </>
   );
 }
