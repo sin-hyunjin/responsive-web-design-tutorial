@@ -1,25 +1,51 @@
-import Images from "@assets/img";
+import { useState } from "react";
+import { logoCloud } from "@assets/img";
+import { Link } from "react-scroll";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    console.log("13");
+    setIsOpen(!isOpen);
+  };
+
   return (
-    // inner
     <header>
       <div className="header-inner">
-        {/* light Logo */}
-        <div className="logo">
-          <a href="#none">
-            <img src={Images.logo} alt="Company Logo" />
+        <div className="left-section">
+          <div className="logo">
+            <a href="/">
+              <img src={logoCloud} alt="Company Logo" width="47px" />
+            </a>
+          </div>
+          <a href="/">
+            <h3>Hyunjin&apos;s Portfolio</h3>
           </a>
         </div>
+        {/* max-width: 1024 px 이하에서만 햄버거 메뉴가 나타남 */}
+        <div className="menu-icon" onClick={toggleMenu}>
+          <i className="xi-bars"></i>
+        </div>
 
-        <div className="gnb">
-          <a href="#none">CEO 인사말</a>
-          <a href="#none">서비스 특징</a>
-          <a href="#none">자주 묻는 질문들</a>
-          <a href="#none">경영비전</a>
-          <a href="#none">사용자 리뷰</a>
-          <a href="#none">앱 사용자 가이드</a>
-          <a href="#none">최신소식</a>
+        <div className={`gnb ${isOpen ? "open" : ""}`} id="gnb">
+          <div className="menu-items">
+            <Link to="home" smooth={true} duration={500}>
+              <span>{"HOME"}</span>
+            </Link>
+            <Link to="about" smooth={true} duration={500}>
+              <span>{"ABOUT"}</span>
+            </Link>
+            <Link to="skills" smooth={true} duration={500}>
+              <span>{"SKILLS"}</span>
+            </Link>
+            <Link to="archiving" smooth={true} duration={500}>
+              <span>ARCHIVING</span>
+            </Link>
+            <Link to="projects" smooth={true} duration={500}>
+              <span>PROJECTS</span>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

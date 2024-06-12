@@ -1,0 +1,29 @@
+/* =================================
+       Section4 : feature
+   ================================= */
+
+.feature {
+  .feature-inner {
+    width: 1300px;
+    margin: auto;
+
+    .feature-content {
+      overflow: hidden;
+      margin: 100px 0;
+      & > div {
+        float: left;
+        width: 50%;
+        text-align: center;
+      }
+      .feature-mockup {
+      }
+      .feature-about {
+        padding: 0 70px;
+        padding-top: 30px;
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

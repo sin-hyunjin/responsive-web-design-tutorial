@@ -1,9 +1,8 @@
-import { Outlet, useLocation } from "react-router";
+import { Outlet } from "react-router";
 import Header from "./Header";
 import Footer from "./Footer";
 
 const Container = () => {
-  const { pathname } = useLocation();
   return (
     <div>
       <Header />

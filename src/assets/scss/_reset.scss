@@ -1,0 +1,50 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button,
+input {
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+/* Default CSS*/
+body {
+  font-family: "NEXON Lv2 Gothic", sans-serif;
+  font-size: 18px;
+  line-height: 1.7em;
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+}
+
+/* display : */
+header {
+  // display: none;
+}
+.welcome {
+  // display: none;
+}
+.intro-access,
+.access-inner {
+  // display: none;
+}
+.banner {
+  display: none;
+}
+.feature {
+  display: none;
+}

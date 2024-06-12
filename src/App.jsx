@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router";
 import Container from "@components/common/Container";
 import Main from "@components/pages/Main";
 import { MAIN_PATH } from "@constants";
-import "@assets/scss/_main.scss";
+import "@assets/scss/_index.scss";
 // App.jsx
 function App() {
   return (

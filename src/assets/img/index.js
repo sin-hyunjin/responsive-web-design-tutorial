@@ -46,3 +46,4 @@ export { default as vision01 } from "./images/vision-01.jpg";
 export { default as vision02 } from "./images/vision-02.jpg";
 export { default as vision03 } from "./images/vision-03.jpg";
 export { default as waveLine } from "./images/wave-line.png";
+export { default as logoCloud } from "./images/logo-cloud.png";

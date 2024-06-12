@@ -1,0 +1,91 @@
+/* =================================
+       Section2 : intro-access
+   ================================= */
+
+.intro-access,
+.access-inner {
+  width: 1300px;
+  margin: auto;
+}
+/* intro inner */
+.intro-inner {
+  .intro-content {
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    padding: 50px 0;
+    div {
+      float: left;
+      width: 50%;
+    }
+    // intro-left
+    .intro-left {
+      padding-right: 50px;
+      img {
+        width: 30px;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(89%)
+          saturate(2290%) hue-rotate(141deg) brightness(90%) contrast(101%);
+      }
+      h3 {
+        font-weight: bold;
+      }
+    }
+    // intro-right
+    .intro-right {
+      text-align: center;
+      div {
+        float: left;
+        padding: 20px;
+      }
+      .intro-msg {
+        width: 60%;
+        h3 {
+          font-size: 28px;
+          color: #009b72;
+          big {
+            display: block;
+          }
+        }
+        p {
+        }
+      }
+      .intro-photo {
+        width: 40%;
+        img {
+          border-radius: 15px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/* access inner */
+.access-inner {
+  .access-content {
+    padding-top: 50px;
+    overflow: hidden;
+    div {
+      float: left;
+      width: 50%;
+    }
+    .access-left {
+      padding-right: 50px;
+      padding-top: 50px;
+
+      h2 {
+        font-size: 34px;
+      }
+      .btn-download {
+        width: 100%;
+        margin-top: 70px;
+      }
+    }
+    .access-right {
+      text-align: center;
+      img {
+        // 사진은 기본적으로 inline속성에 margin값을 가지고 있어서 display : block 으로 없앰
+        display: block;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,1 +1,121 @@
-// src/components/common/Header.jsx
+/* 전체 헤더 스타일 */
+header {
+  position: fixed; /* 고정 위치 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(66, 167, 226, 0.885);
+  // opacity: 0.98;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* 다른 요소 위에 표시되도록 */
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    .left-section {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        margin-right: 10px;
+      }
+
+      h3 {
+        color: #f9f9f9;
+        margin: 0;
+      }
+    }
+    /* 햄버거 메뉴 아이콘 */
+    .menu-icon {
+      display: none; /* 기본적으로 숨김 */
+    }
+    .gnb {
+      display: flex;
+
+      span {
+        color: #f9f9f9;
+        margin: 0 15px;
+        text-decoration: none;
+
+        font-weight: bold;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: transparent;
+          transition: background 0.3s;
+        }
+
+        &.active::after {
+          background: linear-gradient(
+            to right,
+            #1f8de6,
+            #a2d3fa
+          ); /* 활성화된 링크의 그라데이션 바닥선 */
+        }
+      }
+    }
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  header {
+    .header-inner {
+      flex-direction: column;
+      align-items: center;
+
+      .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 22px 25px;
+        padding: auto;
+        cursor: pointer;
+
+        i {
+          font-size: 32px;
+        }
+      }
+      .open {
+        display: none;
+        transition: all 0.1s ease;
+      }
+      .gnb {
+        position: relative;
+        width: 110%;
+
+        .menu-items {
+          background-color: white;
+          width: 100%;
+          margin-top: 10px;
+
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          transition: all 0.1s ease;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+
+          padding: 10px 20px;
+        }
+        span {
+          margin: 12px 30px;
+          float: right;
+          color: rgba(66, 167, 226, 0.885);
+        }
+      }
+    }
+  }
+}

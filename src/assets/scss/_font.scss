@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 /* Fontawesome 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -19,14 +20,16 @@
 }
 
 /* Usage of imported fonts in CSS classes */
-.noto-sans-kr {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-.raleway {
-  font-family: "Raleway", sans-serif;
-}
-
-.montserrat {
-  font-family: "Montserrat", sans-serif;
+@mixin font-family($font-name) {
+  @if $font-name == "noto-sans-kr" {
+    font-family: "Noto Sans KR", sans-serif;
+  } @else if $font-name == "raleway" {
+    font-family: "Raleway", sans-serif;
+  } @else if $font-name == "montserrat" {
+    font-family: "Montserrat", sans-serif;
+  } @else if $font-name == "source-sans-3" {
+    font-family: "Source Sans 3", sans-serif;
+  } @else {
+    @warn 'Unknown font family #{$font-name}.';
+  }
 }

@@ -1,0 +1,11 @@
+// SCSS
+@import "reset";
+@import "font";
+@import "common";
+@import "header";
+@import "@assets/scss/Main";
+
+/** SCSS에서는 중첩하여 import를 할 수 있다 
+
+    -> font 파일을 먼저 import 한 후에 다른 파일들을 import하면 font 스타일이 각 섹션 파일에 모두 적용된다. 
+*/
