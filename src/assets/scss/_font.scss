@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-
+@import url("//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css");
 /* Fontawesome 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -18,7 +18,13 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "intelone-mono-font-family-regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 /* Usage of imported fonts in CSS classes */
 @mixin font-family($font-name) {
   @if $font-name == "noto-sans-kr" {

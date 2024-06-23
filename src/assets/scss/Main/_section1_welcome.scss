@@ -1,55 +1,87 @@
+$duration: 0.8s;
+$half-duration: $duration / 2;
+$easing: cubic-bezier(0.25, 0, 0.1, 1);
+@mixin transition {
+  transition: all $half-duration $half-duration $easing;
+}
 /* =================================
-       Section1 : welcome
+       Section1 : Home
    ================================= */
-.welcome {
+.home-inner {
   // border: 1px solid #000;
-  height: 100vh;
+  height: 90vh;
   position: relative;
   overflow-x: hidden;
-  // ========
-  .slideshow {
-    * {
-      outline: none;
-    }
-    img {
-      background: no-repeat;
-      object-fit: cover;
+
+  display: flex;
+  justify-content: center;
+  /* =================================
+                Sunrise
+    ================================= */
+  &.sunrise {
+    @extend .home-base-style;
+    .name {
+      color: #04284f;
+      @include transition;
     }
   }
-  // ========
-  .welcome-heading {
-    border: 1px solid #000;
-    position: absolute;
-    width: 750px;
-    left: 200px;
-    top: 50%;
-    text-align: center;
-    transform: translateY(-50%);
-    span {
-      font-size: 24px;
+
+  &.sunset {
+    @extend .home-base-style;
+    .name {
+      color: #fff;
+      @include transition;
     }
-    h1 {
+  }
+}
+
+.home-base-style {
+  .home-heading {
+    position: absolute;
+    // width: %;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    .name {
       @include font-family("source-sans-3");
-      font-size: 60px;
-      font-weight: 600;
-      line-height: 1.2em;
-      margin-bottom: 30px;
-      margin-top: 15px;
-      em {
-        display: block;
-        font-style: normal;
-        color: #eb4d4b;
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .name-hr {
+      width: 4.5rem;
+      border-bottom: 4px solid black;
+    }
+    #typing {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-style: normal;
+      margin-top: -0.9rem;
+      span {
+        font-size: 22px;
+        font-weight: 400;
+      }
+      h3 {
+        padding: 1rem;
+        margin-top: 27px;
+        min-height: 70px; /* Adjust height as needed */
+        overflow: hidden; /* Hide overflow content if any */
+        font-weight: bolder;
+        font-size: 25px;
       }
     }
-    p {
-      padding: 0 100px;
-      margin-bottom: 50px;
-    }
-    .welcome-btns {
+    .home-btns {
       .btn {
         display: inline-block;
         width: 160px;
         padding: 8px;
+
+        font-size: 10px;
         color: #fff;
         border-radius: 5px;
         margin: 5px;

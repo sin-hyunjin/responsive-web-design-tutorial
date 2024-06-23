@@ -12,6 +12,7 @@ export default defineConfig({
       { find: "@components", replacement: "/src/components" },
 
       { find: "@constants", replacement: "/src/constants" },
+      { find: "@context", replacement: "/src/context" },
       { find: "@mocks", replacement: "/src/mocks" },
       { find: "@utils", replacement: "/src/utils" },
     ],

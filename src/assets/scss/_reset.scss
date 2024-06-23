@@ -1,6 +1,7 @@
 /* Reset CSS */
 * {
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 a {
   text-decoration: none;
@@ -23,10 +24,11 @@ h6 {
 
 /* Default CSS*/
 body {
-  font-family: "NEXON Lv2 Gothic", sans-serif;
+  font-family: "intelone-mono-font-family-regularNEXON Lv2 Gothic", sans-serif;
   font-size: 18px;
-  line-height: 1.7em;
+  // line-height: 1.7em;
   margin: 0;
+  padding: 0;
   background-color: #fff;
   color: #222;
 }
@@ -35,12 +37,13 @@ body {
 header {
   // display: none;
 }
-.welcome {
+.home-inner {
   // display: none;
+  overflow-y: scroll;
 }
 .intro-access,
 .access-inner {
-  // display: none;
+  display: none;
 }
 .banner {
   display: none;

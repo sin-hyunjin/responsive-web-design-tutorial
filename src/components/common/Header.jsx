@@ -1,26 +1,34 @@
 import { useState } from "react";
-import { logoCloud } from "@assets/img";
+import { useTime } from "@context/TimeContext";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-
+  const { selectedTime } = useTime();
   const toggleMenu = () => {
-    console.log("13");
+    console.log("toggle test", isOpen);
     setIsOpen(!isOpen);
+  };
+  const handleNavigation = (path) => {
+    navigate(path);
+    if (isOpen === true) {
+      setIsOpen(false);
+    }
   };
 
   return (
-    <header>
-      <div className="header-inner">
+    <header className={` ${selectedTime}`}>
+      <div className={` header-inner`}>
         <div className="left-section">
           <div className="logo">
             <a href="/">
-              <img src={logoCloud} alt="Company Logo" width="47px" />
+              {/* <img src={logoCloud} alt="Company Logo" width="47px" /> */}
             </a>
           </div>
           <a href="/">
-            <h3>Hyunjin&apos;s Portfolio</h3>
+            <h3>HJ&apos;s </h3>
           </a>
         </div>
         {/* max-width: 1024 px 이하에서만 햄버거 메뉴가 나타남 */}
@@ -28,12 +36,24 @@ const Header = () => {
           <i className="xi-bars"></i>
         </div>
 
-        <div className={`gnb ${isOpen ? "open" : ""}`} id="gnb">
+        <div className={`gnb ${isOpen ? "" : "open"}`} id="gnb">
           <div className="menu-items">
-            <Link to="home" smooth={true} duration={500}>
+            <Link
+              to="0"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              onClick={() => handleNavigation("/0")}
+            >
               <span>{"HOME"}</span>
             </Link>
-            <Link to="about" smooth={true} duration={500}>
+            <Link
+              to="1"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              onClick={() => handleNavigation("/1")}
+            >
               <span>{"ABOUT"}</span>
             </Link>
             <Link to="skills" smooth={true} duration={500}>
