@@ -1,0 +1,21 @@
+/* 백그라운드를 이용한 이미지 배경 */
+img{ 
+  width: 400px;
+  height: 400px;
+  background: url(img/front.jpg) no-repeat center;
+}
+
+
+/* object를 이용한 이미지 배경 */
+.frame-object {
+  width: 400px;
+  height: 400px;
+}
+
+.frame-object img {
+  width: inherit;
+  height: inherit;
+  /* 박스사이즈 안쪽에 꽉 채움  */
+  object-fit: cover;
+
+}

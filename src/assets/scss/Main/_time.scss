@@ -31,11 +31,6 @@ $easing: cubic-bezier(0.25, 0, 0.1, 1);
   --color-cloud: white;
 }
 
-:root {
-  --color-window-dark: #3b98d8;
-  --color-window-light: white;
-}
-
 @mixin transition {
   transition: all $half-duration $half-duration $easing;
 }
@@ -348,6 +343,13 @@ $easing: cubic-bezier(0.25, 0, 0.1, 1);
   z-index: 10;
 
   overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .heavens {
+    width: 200px;
+    height: 100%;
+  }
 }
 
 [class^="sun"] {

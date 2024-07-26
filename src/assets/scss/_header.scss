@@ -1,5 +1,9 @@
-$duration: 0.4s; /* 트랜지션 기간 설정 */
-
+$duration: 0.8s;
+$half-duration: 0.4s;
+$easing: cubic-bezier(0.25, 0, 0.1, 1);
+@mixin transition {
+  transition: all $half-duration $half-duration $easing;
+}
 header {
   position: fixed;
   top: 0;
@@ -11,9 +15,10 @@ header {
 
   .header-inner {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
-    padding: 10px 2.4rem;
+    padding: 10px 5rem;
     margin: 0 auto;
 
     .left-section {
@@ -95,7 +100,6 @@ header {
         width: 100%;
 
         .menu-items {
-          background-color: white;
           width: 100%;
           margin-top: 10px;
           position: absolute;
@@ -122,13 +126,19 @@ header {
   &.sunrise {
     .header-inner {
       background: linear-gradient(to right, #009af9, #f7fcff);
-
+      backdrop-filter: blur(200px);
+      @include transition;
       h3 {
         color: #003366;
       }
 
       span {
-        color: #003366;
+        color: #003366e3;
+      }
+      @media (max-width: 1024px) {
+        .menu-items {
+          background-color: #f7fcff;
+        }
       }
     }
   }
@@ -139,13 +149,18 @@ header {
   &.sunset {
     .header-inner {
       background: linear-gradient(to right, #01050e, #0b425d);
-
+      @include transition;
       h3 {
         color: #dbe2e8;
       }
 
       span {
         color: #dbe2e8;
+      }
+      @media (max-width: 1024px) {
+        .menu-items {
+          background-color: #0b425d;
+        }
       }
     }
   }

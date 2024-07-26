@@ -1,5 +1,5 @@
 // src/Time.js
-import Section1_Welcome from "./Section1_Welcome";
+import Section1_Home from "./Section1_Home";
 import { useTime } from "@context/TimeContext";
 const Time = () => {
   const { selectedTime, setSelectedTime } = useTime();
@@ -9,7 +9,7 @@ const Time = () => {
   };
 
   return (
-    <div className="time-inner" id={"0"}>
+    <div className="time-inner" id={"home"}>
       <input
         type="radio"
         name="time"
@@ -25,9 +25,10 @@ const Time = () => {
         onChange={handleChange}
       />
       <div className="time-content">
+        <Section1_Home id={"home"} />
         <div className="glow"></div>
         <div className="sky"></div>
-        <Section1_Welcome id={"1"} />
+
         <div className="stars"></div>
         <div className="times">
           {/* <div className="time">{formatTime(currentTime)}</div> */}

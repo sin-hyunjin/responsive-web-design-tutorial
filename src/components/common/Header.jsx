@@ -7,6 +7,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const { selectedTime } = useTime();
+
   const toggleMenu = () => {
     console.log("toggle test", isOpen);
     setIsOpen(!isOpen);
@@ -39,11 +40,11 @@ const Header = () => {
         <div className={`gnb ${isOpen ? "" : "open"}`} id="gnb">
           <div className="menu-items">
             <Link
-              to="0"
+              to="home"
               smooth={true}
               duration={500}
               offset={-100}
-              onClick={() => handleNavigation("/0")}
+              onClick={() => handleNavigation("/home")}
             >
               <span>{"HOME"}</span>
             </Link>

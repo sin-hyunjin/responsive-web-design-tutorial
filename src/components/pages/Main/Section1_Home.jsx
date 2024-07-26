@@ -32,10 +32,10 @@ const Section1_Welcome = () => {
           </em>
           <div className="home-btns">
             <a href="#none" className="btn start">
-              Go About
+              <span>Go Abouto </span>
             </a>
             <a href="#none" className="btn guide">
-              Go Projects
+              <span>Go Projects</span>
             </a>
           </div>
         </div>

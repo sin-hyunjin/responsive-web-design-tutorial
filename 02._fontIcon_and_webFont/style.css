@@ -1,1 +1,31 @@
-@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css");
+/* fontawesome */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* XEICON */
+@import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+
+.box {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+/* fontawesome content name으로 가상아이콘을 가져올수 있다. 
+  - font-family : fontawesome 를 반드시 넣어야한다 
+*/
+.box:before {
+  content: "\f0c9";
+  font-family: fontawesome;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: black;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  text-align: center;
+  line-height: 30px;
+}

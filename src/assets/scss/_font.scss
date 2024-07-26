@@ -1,9 +1,17 @@
+span {
+  font-family: var(--bodyFont);
+}
+
 /* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 700
+
 /* Fontawesome 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -26,6 +34,7 @@
   font-style: normal;
 }
 /* Usage of imported fonts in CSS classes */
+
 @mixin font-family($font-name) {
   @if $font-name == "noto-sans-kr" {
     font-family: "Noto Sans KR", sans-serif;
@@ -35,6 +44,8 @@
     font-family: "Montserrat", sans-serif;
   } @else if $font-name == "source-sans-3" {
     font-family: "Source Sans 3", sans-serif;
+  } @else if $font-name == "titleFont" {
+    font-family: var(--titleFont), sans-serif;
   } @else {
     @warn 'Unknown font family #{$font-name}.';
   }
